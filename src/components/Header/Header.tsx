@@ -1,4 +1,6 @@
 import s from './Header.module.css'
+import React from 'react'
+
 import { HeaderProps } from '../../assets/types'
 
 export const Header: React.FC<HeaderProps> = ({ title, descr }) => {
