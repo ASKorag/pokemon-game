@@ -1,12 +1,15 @@
 import s from './Layout.module.css'
+
+import React from 'react'
+
 import { LayoutProps, LayoutStyle } from '../../assets/types'
 
 export const Layout: React.FC<LayoutProps> = ({
   id,
   title,
-  descr,
   urlBg,
   colorBg,
+  children,
 }) => {
   let style: LayoutStyle = {}
 
@@ -26,9 +29,7 @@ export const Layout: React.FC<LayoutProps> = ({
             <h3>{title}</h3>
             <span className={s.separator}></span>
           </div>
-          <div className={[s.desc, s.full].join(' ')}>
-            {descr && <p>{descr}</p>}
-          </div>
+          <div className={[s.desc, s.full].join(' ')}>{children}</div>
         </article>
       </div>
     </section>
