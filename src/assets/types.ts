@@ -38,3 +38,16 @@ export type Pokemon = {
     left: number | string
   }
 }
+
+export type PokemonCardPros = {
+  id: number
+  name: string
+  type: string
+  img: string
+  values: {
+    top: number | string
+    right: number | string
+    bottom: number | string
+    left: number | string
+  }
+}
